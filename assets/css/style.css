@@ -1,4 +1,29 @@
+:root{
+    --headcolor: #7abbcf;
+    --bgcolor: #cbebf4;
+    --accentcolor: #3B8B90;
+    --reccardcolor: #14656A;
+    --darkfont: rgb(6, 76, 93);
+    --lightfont: rgb(232, 246, 250);
+
+}
 * {
     margin: 0;
     padding: 0;
+}
+h1{
+    text-align: center;
+    color:rgb(6, 76, 93);
+
+}
+header{
+    background-color: var(--headcolor);
+}
+body{
+    background-color: var(--bgcolor);
+
+}
+#middle-top-col{
+    text-align: center;
+    margin-top: 25px;
 }
