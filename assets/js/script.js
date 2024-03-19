@@ -69,12 +69,11 @@ function displayTimedRecipes(data) {
   console.log(cuisineType);
   console.log(dishType);
 }
-=======
+
 console.log("Hello World");
 const toggleTheme = document.getElementById(`toggle-mode`);
 const body = document.body;
 
-toggleTheme.addEventListener('click', () => {
-    body.classList.toggle(`dark-mode`);
+toggleTheme.addEventListener("click", () => {
+  body.classList.toggle(`dark-mode`);
 });
->>>>>>> 427af2614e768db26ce190c061cb3f1f56c7d2e1
