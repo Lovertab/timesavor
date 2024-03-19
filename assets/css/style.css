@@ -1,4 +1,4 @@
-:root{
+:root {
     --headcolor: #6290C3;
     --bgcolor: #BF4E30;
     --accentcolor: #093824;
@@ -8,43 +8,67 @@
     --lightfont: #F8F7FF;
 
 }
+
+/* light and dark button */
+/* light mode */
+body {
+    background-color: #ffffff;
+    color: #333333;
+    transition: 0.5s;
+}
+
+/* Dark Mode Styles */
+.dark-mode {
+    background-color: #333333;
+    color: #ffffff;
+    transition: 0.5s;
+}
+
 * {
     margin: 0;
     padding: 0;
 }
+
+
 h1, h2, h3, p{
     text-align: center;
-    color:var(--reccardcolor);
+    color: var(--reccardcolor);
 
 }
-header{
+
+header {
     background-color: var(--headcolor);
 }
+
 body{
     background-color: var(--lightfont) !important;
-
 }
-#middle-top-col{
+
+#middle-top-col {
     text-align: center;
     margin-top: 25px;
 }
-#left-col{
+
+#left-col {
     background-color: var(--headcolor);
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
 }
-.form-group{
+
+.form-group {
     margin-bottom: 20px;
     color:#F8F7FF;
     font-weight: 500;
     font-size: large;
 
 }
-.form-group label{
+
+.form-group label {
     display: block;
     margin-bottom: 5px;
 }
+
 .btn{
     display: inline;
     padding: 10px 20px;

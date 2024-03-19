@@ -1,23 +1,26 @@
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TimeSavor</title>
     <link rel="stylesheet" href="assets/css/style.css" />
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-    />
-  </head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+</head>
 
-  <body>
+<body>
     <header>
-      <h1>Time Savor</h1>
+        <h1>Time Savor</h1>
     </header>
     <div id="middle-top-col">
-      <h3>Welcome to Time Savor</h3>
-      <p>Save minutes, savor meals</p>
+        <h3>Welcome to Time Savor</h3>
+        <p>Save minutes, savor meals</p>
     </div>
+    <section>
+        <button type="button" id="toggle-mode">
+            Change theme 🌞
+        </button>
+    </section>
     <div class="container">
         <div class="row">
             <div class="col-md-6"id="left-col">
@@ -32,13 +35,13 @@
                     <option value="tea-time">Tea Time</option>
                   </select>
                 </div>
-                <div class="form-group">
-                    <label for="cuisineSelect">Cuisine Type:</label>
-                    <select class="form-control" id="cuisineSelect">
-                      <option value="american">American</option>
+                  <div class="form-group">
+                        <label for="cuisineSelect">Cuisine Type:</label>
+                        <select class="form-control" id="cuisineSelect">
+                            <option value="american">American</option>
                       <option value="chinese">Chinese</option>
                       <option value="indian">Indian</option>
-                      <option value="mexican">Mexican</option>
+                            <option value="mexican">Mexican</option>
                     </select>
                   </div>
                 <div class="form-group">
@@ -52,8 +55,8 @@
                   <div class="form-group">
                     <label for="excludeOption">Exclude:</label>
                     <select class="form-control" id="excludeOption">
-                      <option value="meat">Meat</option>
-                      <option value="fish">Fish</option>
+                            <option value="meat">Meat</option>
+                          <option value="fish">Fish</option>
                       <option value="gluten">Gluten</option>
                     </select>
                   </div>
@@ -64,12 +67,15 @@
                       <option value="half-hour">30 minutes</option>
                       <option value="hour">60 minutes</option>
                     </select>
-                  </div>
+                    </div>
+              
+          
+          
                   <button type="submit" class="btn btn-primary" style="width:100%">Submit</button>
               </div>
           
               <div class="col-md-6" id="right-col">
-                <!--
+                  <!--
                       add image
                   -->
               </div>
@@ -78,5 +84,6 @@
     
 
     <script src="assets/js/script.js"></script>
-  </body>
+</body>
+
 </html>
