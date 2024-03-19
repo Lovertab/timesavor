@@ -60,8 +60,8 @@ function displayTimedRecipes(data) {
   card.appendChild(cuisineElement);
   card.appendChild(dishElement);
 
-  // Append the card to the desired container in your HTML --REPLACE WITH CONTAINER ID--
-  const container = document.getElementById("recipe-container");
+  // Append the card to the desired container in your HTML
+  const container = document.getElementById("recipe-cards-container");
   container.appendChild(card);
   console.log(time);
   console.log(cuisineType);
@@ -74,7 +74,7 @@ function createRecipeCards(data) {
   data.hits.forEach((hit) => {
     const recipe = hit.recipe;
 
-    // Create the card element and add Bootstrap classes for styling
+    // Create the card element and still need to add some Bootstrap classes for styling
     const card = document.createElement("div");
     card.classList.add("col", "col-md-6", "col-lg-4", "card", "mb-4");
 
