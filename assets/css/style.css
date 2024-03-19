@@ -10,22 +10,6 @@
 
 }
 
-/* light and dark button */
-/* light mode */
-.light-mode {
-  background-color: #ffffff;
-  color: #333333;
-  transition: 0.5s;
-}
-
-
-/* Dark Mode Styles */
-.dark-mode {
-  background-color: #333333;
-  color: #ffffff;
-  transition: 0.5s;
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -40,7 +24,27 @@ header {
   background-color: var(--headcolor);
 }
 
-body {
+/* light and dark button */
+/* light mode */
+.light-mode {
+  background-color: #ffffff;
+  color: #333333;
+  transition: 0.5s;
+}
+
+/* Dark Mode Styles */
+.dark-mode {
+  background-color: #333333;
+  color: #ffffff;
+  transition: 0.5s;
+}
+
+.btn:hover {
+  background-color: var(--bgcolor) !important;
+}
+
+/* this is the body class */
+.page-body {
   background-color: var(--bgcolor);
 }
 
@@ -158,9 +162,7 @@ body {
   transition: 0.3s ease !important;
 }
 
-.btn:hover {
-  background-color: var(--bgcolor) !important;
-}
+
 
 section {
   display: flex !important;
