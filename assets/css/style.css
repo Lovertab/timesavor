@@ -29,18 +29,28 @@ header {
 .light-mode {
   background-color: #ffffff;
   color: #333333;
-  transition: 0.5s;
+  transition: 0.5s ease;
 }
 
 /* Dark Mode Styles */
 .dark-mode {
   background-color: #333333;
   color: #ffffff;
-  transition: 0.5s;
+  transition: 0.5s ease;
 }
 
-.btn:hover {
-  background-color: var(--bgcolor) !important;
+section .btn:hover {
+  background-color: var(--bgcolor);
+}
+
+section .btn {
+  display: inline;
+  padding: 10px 20px;
+  background-color: var(--reccardcolor);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s ease;
 }
 
 /* this is the body class */
@@ -113,7 +123,7 @@ p {
 
 .btn-primary {
   /* Primary button styling, adjust as needed */
-  background-color: #007bff;
+  background-color: var(--bgcolor);
   /* Example color, adjust as needed */
   border-color: #007bff;
   /* Example color, adjust as needed */
@@ -151,18 +161,6 @@ body {
   display: block;
   margin-bottom: 5px;
 }
-
-.btn {
-  display: inline;
-  padding: 10px 20px;
-  background-color: var(--reccardcolor) !important;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: 0.3s ease !important;
-}
-
-
 
 section {
   display: flex !important;
