@@ -36,7 +36,5 @@ fetchTimedRecipes();
 
 function displayTimedRecipes() {
   const { hits } = data.list[0];
-  const { description, icon } = weather[0];
-  const { temp, humidity } = main;
-  const { speed } = wind;
+  const { dishType, mealType, time, cuisineType, excluded } = recipe[0];
 }
