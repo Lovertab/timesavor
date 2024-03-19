@@ -25,12 +25,10 @@ function fetchTimedRecipes() {
     .then((response) => response.json())
     .then((data) => {
       console.log(data);
-      // displayTimedRecipes(data);
+      displayTimedRecipes(data); // Call this function to process and display the data
     })
     .catch((error) => {
       console.error("Error:", error);
-      weatherInfo.innerHTML = "<p>There was an error fetching recipes.</p>";
-      forecast.innerHTML = "";
     });
 }
 
