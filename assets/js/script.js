@@ -25,7 +25,7 @@ function fetchTimedRecipes() {
     .then((response) => response.json())
     .then((data) => {
       console.log(data);
-      displayTimedRecipes(data); // Call this function to process and display the data
+      createRecipeCards(data); // Add this line to call your new function
     })
     .catch((error) => {
       console.error("Error:", error);
@@ -66,6 +66,53 @@ function displayTimedRecipes(data) {
   console.log(time);
   console.log(cuisineType);
   console.log(dishType);
+}
+function createRecipeCards(data) {
+  const container = document.getElementById("recipe-cards-container");
+  container.innerHTML = ""; // Clear out existing content
+
+  data.hits.forEach((hit) => {
+    const recipe = hit.recipe;
+
+    // Create the card element and add Bootstrap classes for styling
+    const card = document.createElement("div");
+    card.classList.add("col", "col-md-6", "col-lg-4", "card", "mb-4");
+
+    // Create and append the image element
+    const img = document.createElement("img");
+    img.src = recipe.image;
+    img.classList.add("card-img-top");
+    img.alt = "Recipe Image";
+    card.appendChild(img);
+
+    // Create the card body
+    const cardBody = document.createElement("div");
+    cardBody.classList.add("card-body");
+    card.appendChild(cardBody);
+
+    // Set the title
+    const title = document.createElement("h5");
+    title.classList.add("card-title");
+    title.textContent = recipe.label;
+    cardBody.appendChild(title);
+
+    // Set the description or any other information you want to include
+    const description = document.createElement("p");
+    description.classList.add("card-text");
+    description.textContent =
+      recipe.dietLabels.join(", ") || "Delicious recipe";
+    cardBody.appendChild(description);
+
+    // Add a button or link to view the full recipe
+    const viewBtn = document.createElement("a");
+    viewBtn.classList.add("btn", "btn-primary");
+    viewBtn.href = recipe.url;
+    viewBtn.textContent = "View Recipe";
+    cardBody.appendChild(viewBtn);
+
+    // Append the card to the designated container in your HTML
+    container.appendChild(card);
+  });
 }
 
 console.log("Hello World");
