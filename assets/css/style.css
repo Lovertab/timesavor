@@ -120,7 +120,7 @@ header {
 }
 
 body {
-  background-color: var(--lightfont) !important;
+  background-color: var(--lightfont);
 }
 
 #middle-top-col {
