@@ -1,0 +1,94 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TimeSavor</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+</head>
+
+<body class="light-mode" class="page-body">
+  <header>
+    <h1>Time Savor</h1>
+    <section class="btn-mode">
+      <button type="button" id="toggle-mode" class="btn btn-primary">
+        Change theme 🌞
+      </button>
+    </section>
+  </header>
+  <div id="middle-top-col">
+    <h3>Welcome to Time Savor</h3>
+    <p>Save minutes, savor meals</p>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6" id="left-col">
+        <h2>Specificy Your Requirements Here</h2>
+        <div class="form-group">
+          <label for="mealType">Meal Type:</label>
+          <select class="form-control" id="mealType">
+            <option value="breakfast">Breakfast</option>
+            <option value="lunch">Lunch</option>
+            <option value="dinner">Dinner</option>
+            <option value="snack">Snack</option>
+            <option value="tea-time">Tea Time</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="cuisineSelect">Cuisine Type:</label>
+          <select class="form-control" id="cuisineSelect">
+            <option value="american">American</option>
+            <option value="chinese">Chinese</option>
+            <option value="indian">Indian</option>
+            <option value="mexican">Mexican</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="dishType">Dish Type:</label>
+          <select class="form-control" id="dishType">
+            <option value="main-course">Main Course</option>
+            <option value="salad">Salad</option>
+            <option value="sandwiches">Sandwiches</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="excludeOption">Exclude:</label>
+          <select class="form-control" id="excludeOption">
+            <option value="meat">Meat</option>
+            <option value="fish">Fish</option>
+            <option value="gluten">Gluten</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="timeDuration">Time Duration:</label>
+          <select class="form-control" id="timeDuration">
+            <option value="half-hour">30 minutes</option>
+            <option value="hour">60 minutes</option>
+          </select>
+        </div>
+
+
+
+        <section>
+          <button type="submit" class="btn btn-primary" style="width:100%">Submit</button>
+        </section>
+      </div>
+
+      <div class="col-md-6" id="right-col">
+        <!--
+                      add image
+                  -->
+      </div>
+    </div>
+  </div>
+
+  <footer>
+
+  </footer>
+  <script src="assets/js/script.js"></script>
+</body>
+
+</html>
