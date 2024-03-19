@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ///API Key
 const appID = "05e0e399";
 const appKey = "eac8bc585be359a5c08825b3eccf7a8f";
