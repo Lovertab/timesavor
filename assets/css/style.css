@@ -44,10 +44,16 @@ body {
   margin-top: 25px;
 }
 
+h1{
+    padding-top:25px;
+}
+=======
+
 .recipe-cards-container {
   /* Ensures the container takes full width of its parent */
   width: 100%;
 }
+
 
 h1, h2, h3, p{
     text-align: center;
@@ -139,6 +145,15 @@ body{
 }
 .btn:hover{
     background-color: var(--bgcolor) !important;
+}
+section{
+    display: flex !important;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+#toggle-mode{
+    margin-bottom: 10px;
+    margin-right: 5px;
 }
 #right-col{
 
