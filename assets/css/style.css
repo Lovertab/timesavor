@@ -1,11 +1,30 @@
 :root {
-  --headcolor: #7abbcf;
-  --bgcolor: #cbebf4;
-  --accentcolor: #3b8b90;
-  --reccardcolor: #14656a;
-  --darkfont: rgb(6, 76, 93);
-  --lightfont: rgb(232, 246, 250);
+
+    --headcolor: #6290C3;
+    --bgcolor: #BF4E30;
+    --accentcolor: #093824;
+    --hovercolor: #EAC435;
+    --reccardcolor: #1A1B41;
+    --darkfont: #121619;
+    --lightfont: #F8F7FF;
+
 }
+
+/* light and dark button */
+/* light mode */
+body {
+    background-color: #ffffff;
+    color: #333333;
+    transition: 0.5s;
+}
+
+/* Dark Mode Styles */
+.dark-mode {
+    background-color: #333333;
+    color: #ffffff;
+    transition: 0.5s;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -30,6 +49,10 @@ body {
   width: 100%;
 }
 
+h1, h2, h3, p{
+    text-align: center;
+    color: var(--reccardcolor);
+}
 .card {
   /* Basic card styling, adjust as needed */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -71,3 +94,53 @@ body {
   background-color: #007bff; /* Example color, adjust as needed */
   border-color: #007bff; /* Example color, adjust as needed */
 }
+
+header {
+    background-color: var(--headcolor);
+}
+
+body{
+    background-color: var(--lightfont) !important;
+}
+
+#middle-top-col {
+    text-align: center;
+    margin-top: 25px;
+}
+
+#left-col {
+    background-color: var(--headcolor);
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    color:#F8F7FF;
+    font-weight: 500;
+    font-size: large;
+
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.btn{
+    display: inline;
+    padding: 10px 20px;
+    background-color: var(--reccardcolor) !important;
+    border:none;
+    border-radius: 5px;
+    cursor:pointer;
+    transition: 0.3s ease !important;
+}
+.btn:hover{
+    background-color: var(--bgcolor) !important;
+}
+#right-col{
+
+}
+
