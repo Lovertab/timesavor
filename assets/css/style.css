@@ -1,7 +1,8 @@
 :root{
     --headcolor: #6290C3;
-    --bgcolor: #FFEEDD;
-    --accentcolor: #FFD8BE;
+    --bgcolor: #BF4E30;
+    --accentcolor: #093824;
+    --hovercolor: #EAC435;
     --reccardcolor: #1A1B41;
     --darkfont: #121619;
     --lightfont: #F8F7FF;
@@ -11,7 +12,7 @@
     margin: 0;
     padding: 0;
 }
-h1, h3, p{
+h1, h2, h3, p{
     text-align: center;
     color:var(--reccardcolor);
 
@@ -20,7 +21,7 @@ header{
     background-color: var(--headcolor);
 }
 body{
-    background-color: var(--bgcolor);
+    background-color: var(--lightfont) !important;
 
 }
 #middle-top-col{
@@ -35,13 +36,27 @@ body{
 }
 .form-group{
     margin-bottom: 20px;
+    color:#F8F7FF;
+    font-weight: 500;
+    font-size: large;
 
 }
 .form-group label{
     display: block;
     margin-bottom: 5px;
 }
-
+.btn{
+    display: inline;
+    padding: 10px 20px;
+    background-color: var(--reccardcolor) !important;
+    border:none;
+    border-radius: 5px;
+    cursor:pointer;
+    transition: 0.3s ease !important;
+}
+.btn:hover{
+    background-color: var(--bgcolor) !important;
+}
 #right-col{
 
 }
