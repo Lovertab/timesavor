@@ -14,14 +14,21 @@ git
   <body>
     <header>
       <h1>Time Savor</h1>
+      <section>
+        <button type="button" id="toggle-mode" class="btn btn-primary">
+          Change theme 🌞
+        </button>
+      </section>
     </header>
     <div id="middle-top-col">
       <h3>Welcome to Time Savor</h3>
       <p>Save minutes, savor meals</p>
     </div>
+
     <div class="container">
       <div class="row">
         <div class="col-md-6" id="left-col">
+          <h2>Specificy Your Requirements Here</h2>
           <div class="form-group">
             <label for="mealType">Meal Type:</label>
             <select class="form-control" id="mealType">
@@ -65,12 +72,10 @@ git
               <option value="hour">60 minutes</option>
             </select>
           </div>
-          <!--
-                      meal type: breakfast, dinner, lunch, snack, tea-time
-                      dish type: main course, salad, sandwiches
-                      type of cusine: american, asian, chinese, indian, south american... (add more if needed)
-                      exclude: meat, meat and fish, gluten
-                  -->
+
+          <button type="submit" class="btn btn-primary" style="width: 100%">
+            Submit
+          </button>
         </div>
 
         <div class="col-md-6" id="right-col">
@@ -81,6 +86,7 @@ git
       </div>
     </div>
 
+    <footer></footer>
     <script src="assets/js/script.js"></script>
   </body>
 </html>

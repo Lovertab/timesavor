@@ -1,47 +1,161 @@
-:root{
+:root {
+
     --headcolor: #6290C3;
-    --bgcolor: #FFEEDD;
-    --accentcolor: #FFD8BE;
+    --bgcolor: #BF4E30;
+    --accentcolor: #093824;
+    --hovercolor: #EAC435;
     --reccardcolor: #1A1B41;
     --darkfont: #121619;
     --lightfont: #F8F7FF;
 
 }
-* {
-    margin: 0;
-    padding: 0;
-}
-h1, h3, p{
-    text-align: center;
-    color:var(--reccardcolor);
 
+/* light and dark button */
+/* light mode */
+body {
+    background-color: #ffffff;
+    color: #333333;
+    transition: 0.5s;
 }
-header{
+
+/* Dark Mode Styles */
+.dark-mode {
+    background-color: #333333;
+    color: #ffffff;
+    transition: 0.5s;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+h1 {
+  text-align: center;
+  color: rgb(6, 76, 93);
+}
+header {
+  background-color: var(--headcolor);
+}
+body {
+  background-color: var(--bgcolor);
+}
+#middle-top-col {
+  text-align: center;
+  margin-top: 25px;
+}
+
+h1{
+    padding-top:25px;
+}
+=======
+
+.recipe-cards-container {
+  /* Ensures the container takes full width of its parent */
+  width: 100%;
+}
+
+
+h1, h2, h3, p{
+    text-align: center;
+    color: var(--reccardcolor);
+}
+.card {
+  /* Basic card styling, adjust as needed */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+  border-radius: 5px; /* Rounded corners */
+}
+
+.card:hover {
+  /* Slight scale effect on hover */
+  transform: scale(1.05);
+}
+
+.card-img-top {
+  width: 100%; /* Ensures the image is as wide as the card */
+  height: 180px; /* Adjust this value to reduce the space for the image */
+  object-fit: cover; /* This will cover the space, potentially cropping the image */
+  border-top-left-radius: calc(
+    0.25rem - 1px
+  ); /* Aligns with Bootstrap's border-radius for cards, if needed */
+  border-top-right-radius: calc(
+    0.25rem - 1px
+  ); /* Aligns with Bootstrap's border-radius for cards, if needed */
+}
+
+.card-title {
+  /* Styling for the recipe title, adjust as needed */
+  font-size: 1.25rem; /* Example size, adjust as needed */
+  font-weight: bold;
+}
+
+.card-text {
+  /* Styling for the recipe description, adjust as needed */
+  font-size: 1rem; /* Example size, adjust as needed */
+  margin-top: 0.5rem;
+}
+
+.btn-primary {
+  /* Primary button styling, adjust as needed */
+  background-color: #007bff; /* Example color, adjust as needed */
+  border-color: #007bff; /* Example color, adjust as needed */
+}
+
+header {
     background-color: var(--headcolor);
 }
-body{
-    background-color: var(--bgcolor);
 
+body{
+    background-color: var(--lightfont) !important;
 }
-#middle-top-col{
+
+#middle-top-col {
     text-align: center;
     margin-top: 25px;
 }
-#left-col{
+
+#left-col {
     background-color: var(--headcolor);
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
 }
-.form-group{
+
+.form-group {
     margin-bottom: 20px;
+    color:#F8F7FF;
+    font-weight: 500;
+    font-size: large;
 
 }
-.form-group label{
+
+.form-group label {
     display: block;
     margin-bottom: 5px;
 }
 
+.btn{
+    display: inline;
+    padding: 10px 20px;
+    background-color: var(--reccardcolor) !important;
+    border:none;
+    border-radius: 5px;
+    cursor:pointer;
+    transition: 0.3s ease !important;
+}
+.btn:hover{
+    background-color: var(--bgcolor) !important;
+}
+section{
+    display: flex !important;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+#toggle-mode{
+    margin-bottom: 10px;
+    margin-right: 5px;
+}
 #right-col{
 
 }
+

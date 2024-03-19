@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ///API Key
 const appID = "05e0e399";
 const appKey = "eac8bc585be359a5c08825b3eccf7a8f";
@@ -69,3 +70,12 @@ function displayTimedRecipes(data) {
   console.log(cuisineType);
   console.log(dishType);
 }
+=======
+console.log("Hello World");
+const toggleTheme = document.getElementById(`toggle-mode`);
+const body = document.body;
+
+toggleTheme.addEventListener('click', () => {
+    body.classList.toggle(`dark-mode`);
+});
+>>>>>>> 427af2614e768db26ce190c061cb3f1f56c7d2e1
