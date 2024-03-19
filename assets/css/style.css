@@ -12,11 +12,12 @@
 
 /* light and dark button */
 /* light mode */
-body {
+.light-mode {
   background-color: #ffffff;
   color: #333333;
   transition: 0.5s;
 }
+
 
 /* Dark Mode Styles */
 .dark-mode {
