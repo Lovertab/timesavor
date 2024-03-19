@@ -1,19 +1,19 @@
 :root{
-    --headcolor: #7abbcf;
-    --bgcolor: #cbebf4;
-    --accentcolor: #3B8B90;
-    --reccardcolor: #14656A;
-    --darkfont: rgb(6, 76, 93);
-    --lightfont: rgb(232, 246, 250);
+    --headcolor: #6290C3;
+    --bgcolor: #FFEEDD;
+    --accentcolor: #FFD8BE;
+    --reccardcolor: #1A1B41;
+    --darkfont: #121619;
+    --lightfont: #F8F7FF;
 
 }
 * {
     margin: 0;
     padding: 0;
 }
-h1{
+h1, h3, p{
     text-align: center;
-    color:rgb(6, 76, 93);
+    color:var(--reccardcolor);
 
 }
 header{
@@ -26,4 +26,22 @@ body{
 #middle-top-col{
     text-align: center;
     margin-top: 25px;
+}
+#left-col{
+    background-color: var(--headcolor);
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.form-group{
+    margin-bottom: 20px;
+
+}
+.form-group label{
+    display: block;
+    margin-bottom: 5px;
+}
+
+#right-col{
+
 }
