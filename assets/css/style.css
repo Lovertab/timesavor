@@ -7,11 +7,19 @@
     --lightfont: rgb(232, 246, 250);
 
 }
+
 /* light and dark button */
 /* light mode */
 body {
     background-color: #ffffff;
     color: #333333;
+    transition: 0.5s;
+}
+
+/* Dark Mode Styles */
+.dark-mode {
+    background-color: #333333;
+    color: #ffffff;
     transition: 0.5s;
 }
 
