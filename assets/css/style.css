@@ -1,28 +1,26 @@
 :root {
-
-    --headcolor: #6290C3;
-    --bgcolor: #BF4E30;
-    --accentcolor: #093824;
-    --hovercolor: #EAC435;
-    --reccardcolor: #1A1B41;
-    --darkfont: #121619;
-    --lightfont: #F8F7FF;
-
+  --headcolor: #6290c3;
+  --bgcolor: #bf4e30;
+  --accentcolor: #093824;
+  --hovercolor: #eac435;
+  --reccardcolor: #1a1b41;
+  --darkfont: #121619;
+  --lightfont: #f8f7ff;
 }
 
 /* light and dark button */
 /* light mode */
 body {
-    background-color: #ffffff;
-    color: #333333;
-    transition: 0.5s;
+  background-color: #ffffff;
+  color: #333333;
+  transition: 0.5s;
 }
 
 /* Dark Mode Styles */
 .dark-mode {
-    background-color: #333333;
-    color: #ffffff;
-    transition: 0.5s;
+  background-color: #333333;
+  color: #ffffff;
+  transition: 0.5s;
 }
 
 * {
@@ -44,20 +42,20 @@ body {
   margin-top: 25px;
 }
 
-h1{
-    padding-top:25px;
+h1 {
+  padding-top: 25px;
 }
-=======
-
-.recipe-cards-container {
+======= .recipe-cards-container {
   /* Ensures the container takes full width of its parent */
   width: 100%;
 }
 
-
-h1, h2, h3, p{
-    text-align: center;
-    color: var(--reccardcolor);
+h1,
+h2,
+h3,
+p {
+  text-align: center;
+  color: var(--reccardcolor);
 }
 .card {
   /* Basic card styling, adjust as needed */
@@ -102,60 +100,57 @@ h1, h2, h3, p{
 }
 
 header {
-    background-color: var(--headcolor);
+  background-color: var(--headcolor);
 }
 
-body{
-    background-color: var(--lightfont) !important;
+body {
+  background-color: var(--lightfont) !important;
 }
 
 #middle-top-col {
-    text-align: center;
-    margin-top: 25px;
+  text-align: center;
+  margin-top: 25px;
 }
 
 #left-col {
-    background-color: var(--headcolor);
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+  background-color: var(--headcolor);
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }
 
 .form-group {
-    margin-bottom: 20px;
-    color:#F8F7FF;
-    font-weight: 500;
-    font-size: large;
-
+  margin-bottom: 20px;
+  color: #f8f7ff;
+  font-weight: 500;
+  font-size: large;
 }
 
 .form-group label {
-    display: block;
-    margin-bottom: 5px;
+  display: block;
+  margin-bottom: 5px;
 }
 
-.btn{
-    display: inline;
-    padding: 10px 20px;
-    background-color: var(--reccardcolor) !important;
-    border:none;
-    border-radius: 5px;
-    cursor:pointer;
-    transition: 0.3s ease !important;
+.btn {
+  display: inline;
+  padding: 10px 20px;
+  background-color: var(--reccardcolor) !important;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s ease !important;
 }
-.btn:hover{
-    background-color: var(--bgcolor) !important;
+.btn:hover {
+  background-color: var(--bgcolor) !important;
 }
-section{
-    display: flex !important;
-    align-items: flex-end;
-    justify-content: flex-end;
+section {
+  display: flex !important;
+  align-items: flex-end;
+  justify-content: flex-end;
 }
-#toggle-mode{
-    margin-bottom: 10px;
-    margin-right: 5px;
+#toggle-mode {
+  margin-bottom: 10px;
+  margin-right: 5px;
 }
-#right-col{
-
+#right-col {
 }
-
