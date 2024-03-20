@@ -75,8 +75,12 @@ function createRecipeCards(data) {
   data.hits.forEach((hit) => {
     const recipe = hit.recipe;
 
+    const recipeId = hit.recipe.uri.split("#recipe_")[1];
+
     const card = document.createElement("div");
     card.classList.add("col", "col-md-6", "col-lg-4", "card", "mb-4");
+    // Store the recipe ID in the card element for access when clicked
+    card.setAttribute("data-recipe-id", recipeId);
 
     const img = document.createElement("img");
     img.src = recipe.image;
@@ -104,6 +108,11 @@ function createRecipeCards(data) {
     viewBtn.href = recipe.url;
     viewBtn.textContent = "View Recipe";
     cardBody.appendChild(viewBtn);
+
+    card.addEventListener("click", function () {
+      const clickedRecipeId = this.getAttribute("data-recipe-id");
+      console.log("Clicked Recipe ID:", clickedRecipeId); // This will now only log when a card is clicked
+    });
 
     container.appendChild(card);
   });
