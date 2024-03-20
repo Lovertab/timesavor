@@ -5,11 +5,11 @@ const appID = "05e0e399";
 const appKey = "eac8bc585be359a5c08825b3eccf7a8f";
 
 /// DOM element references
- const mealType = localStorage.getItem('mealType');
- const cuisineType = localStorage.getItem('cuisineType');
- const dishType = localStorage.getItem('dishType');
- const excluded = localStorage.getItem('excludeOption');
- const time = localStorage.getItem('timeDuration');
+const mealType = localStorage.getItem("mealType");
+const cuisineType = localStorage.getItem("cuisineType");
+const dishType = localStorage.getItem("dishType");
+const excluded = localStorage.getItem("excludeOption");
+const time = localStorage.getItem("timeDuration");
 
 console.log(cuisineType);
 console.log(mealType);
@@ -37,11 +37,10 @@ function displayTimedRecipes(data) {
   const recipe = data.hits[0].recipe;
 
   // Extract the desired information
-  
+
   const time = recipe.totalTime;
   const cuisineType = recipe.cuisineType[0];
   const dishType = recipe.dishType[0];
-
 
   const card = document.createElement("div");
   card.classList.add("recipe-card");
@@ -51,7 +50,6 @@ function displayTimedRecipes(data) {
   const dishElement = document.createElement("p");
   const excludedElement = document.createElement("p");
   const timeElement = document.createElement("p");
-
 
   mealElement.textContent = `Meal Type: ${mealType}`;
   cuisineElement.textContent = `Cuisine: ${cuisineType}`;
@@ -64,7 +62,6 @@ function displayTimedRecipes(data) {
   card.appendChild(dishElement);
   card.appendChild(excludedElement);
   card.appendChild(timeElement);
-
 
   const container = document.getElementById("recipe-cards-container");
   container.appendChild(card);
@@ -117,7 +114,7 @@ function createRecipeCards(data) {
     cardBody.appendChild(description);
 
     const viewBtn = document.createElement("a");
-    viewBtn.classList.add("btn", "btn-primary");
+    viewBtn.classList.add("btn", "btn-primary", "view-recipe-btn"); // Added 'view-recipe-btn' class
     viewBtn.href = recipe.url;
     viewBtn.textContent = "View Recipe";
     cardBody.appendChild(viewBtn);
@@ -181,23 +178,23 @@ searchYouTube(query)
   .then(displayVideo)
   .catch((error) => console.error("Error searching YouTube:", error));
 
-  //GRABS FORM DATA FROM LOCAL STORAGE
-  document.getElementById('formID').addEventListener('submit', function(event){
-    event.preventDefault();
-    const mealType = document.getElementById("mealType").value;
-    localStorage.setItem('mealType', mealType);
+//GRABS FORM DATA FROM LOCAL STORAGE
+document.getElementById("formID").addEventListener("submit", function (event) {
+  event.preventDefault();
+  const mealType = document.getElementById("mealType").value;
+  localStorage.setItem("mealType", mealType);
 
-    const cuisineType = document.getElementById("cuisineSelect").value;
-    localStorage.setItem('cuisineType', cuisineType);
+  const cuisineType = document.getElementById("cuisineSelect").value;
+  localStorage.setItem("cuisineType", cuisineType);
 
-    const dishType = document.getElementById("dishType").value;
-    localStorage.setItem('dishType', dishType);
+  const dishType = document.getElementById("dishType").value;
+  localStorage.setItem("dishType", dishType);
 
-    const excluded = document.getElementById("excludeOption").value;
-    localStorage.setItem('excludeOption', excluded);
+  const excluded = document.getElementById("excludeOption").value;
+  localStorage.setItem("excludeOption", excluded);
 
-    const time = document.getElementById("timeDuration").value;
-    localStorage.setItem('timeDuration', time);
+  const time = document.getElementById("timeDuration").value;
+  localStorage.setItem("timeDuration", time);
 
-    window.location.href='recipecards.html';
-})
+  window.location.href = "recipecards.html";
+});
