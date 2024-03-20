@@ -11,89 +11,97 @@
     <link rel="stylesheet" href="assets/css/style.css" />
   </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Recipe Cards</title>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
-  <link rel="stylesheet" href="assets/css/style.css" />
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Recipe Cards</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
 
-<body>
-  <section class="btn-mode">
-    <button type="button" id="toggle-mode" class="btn btn-primary">
-      Theme
-    </button>
-  </section>
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-md-4">
-        <h1>Recipes</h1>
-        <!-- Content for selecting recipes based on cuisine and time can go here -->
-        <form id="formID">
-          <div class="form-group">
-            <label for="mealType">Meal Type:</label>
-            <select class="form-control" id="mealType">
-              <option value="breakfast">Breakfast</option>
-              <option value="lunch">Lunch</option>
-              <option value="dinner">Dinner</option>
-              <option value="snack">Snack</option>
-              <option value="tea-time">Tea Time</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label for="cuisineSelect">Cuisine Type:</label>
-            <select class="form-control" id="cuisineSelect">
-              <option value="american">American</option>
-              <option value="chinese">Chinese</option>
-              <option value="indian">Indian</option>
-              <option value="mexican">Mexican</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label for="dishType">Dish Type:</label>
-            <select class="form-control" id="dishType">
-              <option value="main-course">Main Course</option>
-              <option value="salad">Salad</option>
-              <option value="sandwiches">Sandwiches</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label for="excludeOption">Exclude:</label>
-            <select class="form-control" id="excludeOption">
-              <option value="meat">Meat</option>
-              <option value="fish">Fish</option>
-              <option value="gluten">Gluten</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label for="timeDuration">Time Duration:</label>
-            <select class="form-control" id="timeDuration">
-              <option value="30">30 minutes</option>
-              <option value="60">60 minutes</option>
-            </select>
-          </div>
-  
-          <section>
-              <button type="submit" class="btn btn-primary" id="submit-button" style="width:100%">Submit</button>
+  <body>
+    <section class="btn-mode">
+      <button type="button" id="toggle-mode" class="btn btn-primary">
+        Theme
+      </button>
+    </section>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-4">
+          <h1>Recipes</h1>
+          <!-- Content for selecting recipes based on cuisine and time can go here -->
+          <form id="formID">
+            <div class="form-group">
+              <label for="mealType">Meal Type:</label>
+              <select class="form-control" id="mealType">
+                <option value="breakfast">Breakfast</option>
+                <option value="lunch">Lunch</option>
+                <option value="dinner">Dinner</option>
+                <option value="snack">Snack</option>
+                <option value="tea-time">Tea Time</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="cuisineSelect">Cuisine Type:</label>
+              <select class="form-control" id="cuisineSelect">
+                <option value="american">American</option>
+                <option value="chinese">Chinese</option>
+                <option value="indian">Indian</option>
+                <option value="mexican">Mexican</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="dishType">Dish Type:</label>
+              <select class="form-control" id="dishType">
+                <option value="main-course">Main Course</option>
+                <option value="salad">Salad</option>
+                <option value="sandwiches">Sandwiches</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="excludeOption">Exclude:</label>
+              <select class="form-control" id="excludeOption">
+                <option value="meat">Meat</option>
+                <option value="fish">Fish</option>
+                <option value="gluten">Gluten</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="timeDuration">Time Duration:</label>
+              <select class="form-control" id="timeDuration">
+                <option value="30">30 minutes</option>
+                <option value="60">60 minutes</option>
+              </select>
+            </div>
+
+            <section>
+              <button
+                type="submit"
+                class="btn btn-primary"
+                id="submit-button"
+                style="width: 100%"
+              >
+                Submit
+              </button>
             </section>
-      </form>
-  
-      </div>
-      <div class="col-md-8">
-        <h2>Recipe Cards</h2>
-        <div class="row" id="recipe-cards-container">
-          <!-- Dynamic recipe cards will be appended here by the JavaScript code -->
+          </form>
+        </div>
+        <div class="col-md-8">
+          <h2>Recipe Cards</h2>
+          <div class="row" id="recipe-cards-container">
+            <!-- Dynamic recipe cards will be appended here by the JavaScript code -->
+          </div>
         </div>
       </div>
     </div>
-  </div>
-  <script src="assets/js/script.js"></script>
-  <script src="assets/js/details.js"></script>
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/details.js"></script>
 
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-</body>
-
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
 </html>
