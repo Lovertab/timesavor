@@ -188,8 +188,16 @@ img {
   min-height: 400px;
 }
 
+#recipe-cards-container .col-md-6 {
+  flex: 0 0 50%;
+  max-width: 30%;
+  margin: 3px;
+}
+/* editing margin */
+
 #recipe-cards-container .card:hover {
   transform: scale(1.05);
+  z-index: 7;
 }
 
 #recipe-cards-container .card-body {
