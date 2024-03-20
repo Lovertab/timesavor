@@ -68,19 +68,25 @@ document.addEventListener("DOMContentLoaded", function () {
 function createRecipeContainer(recipe) {
   // Create the container element
   const recipeContainerEl = document.createElement("div");
-  recipeContainerEl.classList.add("recipe-container");
+  recipeContainerEl.classList.add("recipe-container", "container");
 
-  // Create the recipe image element
-  const recipeImg = document.createElement("img");
-  recipeImg.classList.add("recipe-img");
-  recipeImg.src = recipe.image;
-  recipeContainerEl.appendChild(recipeImg);
+  // Create the row
+  const row = document.createElement("div");
+  row.classList.add("row");
+  recipeContainerEl.appendChild(row);
+
+  // Create the left column
+  const leftCol = document.createElement("div");
+  leftCol.classList.add("col-md-8");
+  row.appendChild(leftCol);
 
   // Create the recipe name element
   const recipeName = document.createElement("h2");
   recipeName.classList.add("recipe-name");
   recipeName.innerText = recipe.label;
-  recipeContainerEl.appendChild(recipeName);
+  recipeName.style.borderBottom = "2px solid #000";
+  recipeName.style.paddingBottom = "10px";
+  leftCol.appendChild(recipeName);
 
   // Create the recipe ingredients element
   const recipeIngredients = document.createElement("ul");
@@ -90,14 +96,27 @@ function createRecipeContainer(recipe) {
     ingredientItem.innerText = ingredient.text;
     recipeIngredients.appendChild(ingredientItem);
   });
-  recipeContainerEl.appendChild(recipeIngredients);
+  leftCol.appendChild(recipeIngredients);
 
   // Create the recipe instructions element
   const recipeInstructions = document.createElement("a");
-  recipeInstructions.classList.add("recipe-instructions");
+  recipeInstructions.classList.add("recipe-instructions", "btn", "btn-primary");
   recipeInstructions.href = recipe.url;
   recipeInstructions.innerText = "View Recipe Instructions";
-  recipeContainerEl.appendChild(recipeInstructions);
+  leftCol.appendChild(recipeInstructions);
+
+  // Create the right column
+  const rightCol = document.createElement("div");
+  rightCol.classList.add("col-md-4");
+  row.appendChild(rightCol);
+
+  // Create the recipe image element
+  const recipeImg = document.createElement("img");
+  recipeImg.classList.add("recipe-img");
+  recipeImg.src = recipe.image;
+  recipeImg.style.maxWidth = "100%";
+  recipeImg.style.height = "auto";
+  rightCol.appendChild(recipeImg);
 
   // Return the container element
   return recipeContainerEl;
