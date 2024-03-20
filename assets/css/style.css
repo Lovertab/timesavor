@@ -1,11 +1,11 @@
 :root {
-  --headcolor: #6290C3;
-  --bgcolor: #BF4E30;
+  --headcolor: #6290c3;
+  --bgcolor: #bf4e30;
   --accentcolor: #093824;
-  --hovercolor: #EAC435;
-  --reccardcolor: #1A1B41;
+  --hovercolor: #eac435;
+  --reccardcolor: #1a1b41;
   --darkfont: #121619;
-  --lightfont: #F8F7FF;
+  --lightfont: #f8f7ff;
 }
 
 * {
@@ -144,7 +144,7 @@ header {
 
 .form-group {
   margin-bottom: 20px;
-  color: #F8F7FF;
+  color: #f8f7ff;
   font-weight: 500;
   font-size: large;
 }
@@ -158,7 +158,6 @@ section {
   display: flex !important;
   align-items: flex-end;
   justify-content: flex-end;
-
 }
 
 #toggle-mode {
