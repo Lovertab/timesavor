@@ -5,16 +5,17 @@ const appID = "05e0e399";
 const appKey = "eac8bc585be359a5c08825b3eccf7a8f";
 
 /// DOM element references
-// const cuisineType = document.getElementById("cuisineSelect");
-// const mealType = document.getElementById("mealType");
-// const dishType = document.getElementById("dishType");
-// const time = document.getElementById("timeDuration");
-// const excluded = document.getElementById("excludeOption");
-const cuisineType = "American";
-const mealType = "Lunch";
-const dishType = "Sandwiches";
-const time = "20";
-const excluded = "gluten";
+ const mealType = localStorage.getItem('mealType');
+ const cuisineType = localStorage.getItem('cuisineType');
+ const dishType = localStorage.getItem('dishType');
+ const excluded = localStorage.getItem('excludeOption');
+ const time = localStorage.getItem('timeDuration');
+
+console.log(cuisineType);
+console.log(mealType);
+console.log(dishType);
+console.log(time);
+console.log(excluded);
 
 fetchTimedRecipes();
 
@@ -36,28 +37,40 @@ function displayTimedRecipes(data) {
   const recipe = data.hits[0].recipe;
 
   // Extract the desired information
+  
   const time = recipe.totalTime;
   const cuisineType = recipe.cuisineType[0];
   const dishType = recipe.dishType[0];
 
+
   const card = document.createElement("div");
   card.classList.add("recipe-card");
 
-  const timeElement = document.createElement("p");
+  const mealElement = document.createElement("p");
   const cuisineElement = document.createElement("p");
   const dishElement = document.createElement("p");
+  const excludedElement = document.createElement("p");
+  const timeElement = document.createElement("p");
 
-  timeElement.textContent = `Time: ${time.toLocaleTimeString()}`;
+
+  mealElement.textContent = `Meal Type: ${mealType}`;
   cuisineElement.textContent = `Cuisine: ${cuisineType}`;
   dishElement.textContent = `Dish Type: ${dishType}`;
+  excludedElement.textContent = `Excluded: ${excluded}`;
+  timeElement.textContent = `Time: ${time.toLocaleTimeString()}`;
 
-  card.appendChild(timeElement);
+  card.appendChild(mealElement);
   card.appendChild(cuisineElement);
   card.appendChild(dishElement);
+  card.appendChild(excludedElement);
+  card.appendChild(timeElement);
+
 
   const container = document.getElementById("recipe-cards-container");
   container.appendChild(card);
   console.log(time);
+  console.log(excluded);
+  console.log(mealType);
   console.log(cuisineType);
   console.log(dishType);
 }
@@ -167,3 +180,24 @@ function displayVideo(videoData) {
 searchYouTube(query)
   .then(displayVideo)
   .catch((error) => console.error("Error searching YouTube:", error));
+
+  //GRABS FORM DATA FROM LOCAL STORAGE
+  document.getElementById('formID').addEventListener('submit', function(event){
+    event.preventDefault();
+    const mealType = document.getElementById("mealType").value;
+    localStorage.setItem('mealType', mealType);
+
+    const cuisineType = document.getElementById("cuisineSelect").value;
+    localStorage.setItem('cuisineType', cuisineType);
+
+    const dishType = document.getElementById("dishType").value;
+    localStorage.setItem('dishType', dishType);
+
+    const excluded = document.getElementById("excludeOption").value;
+    localStorage.setItem('excludeOption', excluded);
+
+    const time = document.getElementById("timeDuration").value;
+    localStorage.setItem('timeDuration', time);
+
+    window.location.href='recipecards.html';
+})

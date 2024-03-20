@@ -174,4 +174,12 @@ section {
   background-color: var(--reccardcolor);
 }
 
+<<<<<<< Updated upstream
 /* #right-col {}*/
+=======
+/* #right-col {}*/
+img{
+    width:600px;
+    height:550px;
+}
+>>>>>>> Stashed changes
