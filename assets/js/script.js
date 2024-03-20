@@ -3,15 +3,13 @@
 ///API Key
 const appID = "05e0e399";
 const appKey = "eac8bc585be359a5c08825b3eccf7a8f";
+
 /// DOM element references
 // const cuisineType = document.getElementById("cuisineSelect");
 // const mealType = document.getElementById("mealType");
 // const dishType = document.getElementById("dishType");
 // const time = document.getElementById("timeDuration");
 // const excluded = document.getElementById("excludeOption");
-
-console.log("Hello World");
-
 const cuisineType = "American";
 const mealType = "Lunch";
 const dishType = "Sandwiches";
@@ -119,6 +117,8 @@ function createRecipeCards(data) {
 }
 
 console.log("Hello World");
+
+// Theme Switcher
 const toggleTheme = document.getElementById(`toggle-mode`);
 const body = document.body;
 
