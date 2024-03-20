@@ -174,4 +174,10 @@ section {
   background-color: var(--reccardcolor);
 }
 
+
 /* #right-col {}*/
+img{
+    width:600px;
+    height:550px;
+}
+
