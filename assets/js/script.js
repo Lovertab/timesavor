@@ -141,7 +141,13 @@ toggleTheme.addEventListener('click', () => {
         localStorage.setItem('theme', 'light');
     }
 });
-
+// Check for theme in localStorage and apply it
+const savedTheme = localStorage.getItem('theme');
+if (savedTheme === 'dark') {
+    body.classList.add('dark-mode');
+} else {
+    body.classList.add('light-mode');
+}
 // Youtube API Functions
 
 const API_KEY = "AIzaSyB6MgbqljzSbiDedQkLjTe6CXU6jE0TVDA";
