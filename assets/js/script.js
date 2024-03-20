@@ -113,10 +113,10 @@ function createRecipeCards(data) {
 const toggleTheme = document.getElementById(`toggle-mode`);
 const body = document.body;
 
-// toggleTheme.addEventListener("click", () => {
-//   body.classList.toggle(`dark-mode`);
-//   body.classList.toggle(`light-mode`);
-// });
+toggleTheme.addEventListener("click", () => {
+  body.classList.toggle(`dark-mode`);
+  body.classList.toggle(`light-mode`);
+});
 
 // Youtube API Functions
 
