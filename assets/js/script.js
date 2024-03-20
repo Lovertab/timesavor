@@ -11,12 +11,6 @@ const dishType = localStorage.getItem("dishType");
 const excluded = localStorage.getItem("excludeOption");
 const time = localStorage.getItem("timeDuration");
 
-console.log(cuisineType);
-console.log(mealType);
-console.log(dishType);
-console.log(time);
-console.log(excluded);
-
 fetchTimedRecipes();
 
 function fetchTimedRecipes() {
@@ -35,14 +29,11 @@ function fetchTimedRecipes() {
 
 function displayTimedRecipes(data) {
   const recipe = data.hits[0].recipe;
-
-  // Extract the desired information
-
   const time = recipe.totalTime;
   const cuisineType = recipe.cuisineType[0];
   const dishType = recipe.dishType[0];
-
   const card = document.createElement("div");
+
   card.classList.add("recipe-card");
 
   const mealElement = document.createElement("p");
@@ -128,13 +119,10 @@ function createRecipeCards(data) {
     viewBtn.textContent = "View Recipe";
     cardBody.appendChild(viewBtn);
     //added button even listener here
-    viewBtn.addEventListener("click", function(){
-      //const recipeContainer = createRecipeContainer(recipe);
-      //recipeContainer.appendChild(recipeContainer);
-      //const queryParameter = new URLSearchParams({
-      //  recipe: JSON.stringify(recipe)
-      //});
-      window.location.href=`recipedetails.html`;
+
+    viewBtn.addEventListener("click", function () {
+      sessionStorage.setItem("recipeData", JSON.stringify(recipe));
+      window.location.href = "recipedetails.html";
     });
 
     card.addEventListener("click", function () {
@@ -149,22 +137,22 @@ function createRecipeCards(data) {
 // Theme Switcher
 const toggleTheme = document.getElementById(`toggle-mode`);
 const body = document.body;
-toggleTheme.addEventListener('click', () => {
-    body.classList.toggle('dark-mode');
-    body.classList.toggle('light-mode');
+toggleTheme.addEventListener("click", () => {
+  body.classList.toggle("dark-mode");
+  body.classList.toggle("light-mode");
 
-    if (body.classList.contains('dark-mode')) {
-        localStorage.setItem('theme', 'dark');
-    } else {
-        localStorage.setItem('theme', 'light');
-    }
+  if (body.classList.contains("dark-mode")) {
+    localStorage.setItem("theme", "dark");
+  } else {
+    localStorage.setItem("theme", "light");
+  }
 });
 // Check for theme in localStorage and apply it
-const savedTheme = localStorage.getItem('theme');
-if (savedTheme === 'dark') {
-    body.classList.add('dark-mode');
+const savedTheme = localStorage.getItem("theme");
+if (savedTheme === "dark") {
+  body.classList.add("dark-mode");
 } else {
-    body.classList.add('light-mode');
+  body.classList.add("light-mode");
 }
 // Youtube API Functions
 
