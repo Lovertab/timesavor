@@ -227,3 +227,9 @@ img {
   width: 100%;
   height: 100%;
 }
+
+.cooking-time {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: #666;
+}
