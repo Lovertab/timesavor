@@ -160,8 +160,9 @@ header {
   margin-bottom: 5px;
 }
 
-section {
-  display: flex !important;
+/* theme button */
+.btn-mode {
+  display: flex;
   align-items: flex-end;
   justify-content: flex-end;
 }
@@ -211,4 +212,3 @@ img {
 #recipe-cards-container .card-text {
   margin-top: auto;
 }
-
