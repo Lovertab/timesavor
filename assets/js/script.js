@@ -102,6 +102,10 @@ function createRecipeCards(data) {
     cardBody.classList.add("card-body");
     card.appendChild(cardBody);
 
+    const cardInfo = document.createElement("div");
+    cardInfo.classList.add("card-info");
+    cardBody.appendChild(cardInfo);
+
     const title = document.createElement("h5");
     title.classList.add("card-title");
     title.textContent = recipe.label;
