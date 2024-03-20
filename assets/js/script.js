@@ -69,6 +69,7 @@ function displayTimedRecipes(data) {
   console.log(cuisineType);
   console.log(dishType);
 }
+
 function createRecipeCards(data) {
   const container = document.getElementById("recipe-cards-container");
   container.innerHTML = ""; // Clear out existing content
@@ -128,7 +129,9 @@ toggleTheme.addEventListener("click", () => {
 
 // Youtube API Functions
 
-const API_KEY = "YOUR_API_KEY";
+const API_KEY = "AIzaSyB6MgbqljzSbiDedQkLjTe6CXU6jE0TVDA";
+
+query = "chicken sandwich" + " recipe";
 
 async function searchYouTube(query) {
   const response = await fetch(
@@ -149,3 +152,7 @@ function displayVideo(videoData) {
   `;
   videoContainer.innerHTML = videoEmbed;
 }
+
+searchYouTube(query)
+  .then(displayVideo)
+  .catch((error) => console.error("Error searching YouTube:", error));
