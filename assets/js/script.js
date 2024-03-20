@@ -86,6 +86,9 @@ function createRecipeCards(data) {
     const recipe = hit.recipe;
 
     const recipeId = hit.recipe.uri.split("#recipe_")[1];
+    console.log(recipeId);
+    //local storage recipe
+    //const recipeID = localStorage.setItem('recipeID');
 
     const card = document.createElement("div");
     card.classList.add("col", "col-md-6", "col-lg-4", "card", "mb-4");
@@ -118,10 +121,21 @@ function createRecipeCards(data) {
     cardBody.appendChild(description);
 
     const viewBtn = document.createElement("a");
+
     viewBtn.classList.add("btn", "btn-primary", "view-recipe-btn"); // Added 'view-recipe-btn' class
-    viewBtn.href = recipe.url;
+    //viewBtn.href = recipe.url;
+
     viewBtn.textContent = "View Recipe";
     cardBody.appendChild(viewBtn);
+    //added button even listener here
+    viewBtn.addEventListener("click", function(){
+      //const recipeContainer = createRecipeContainer(recipe);
+      //recipeContainer.appendChild(recipeContainer);
+      //const queryParameter = new URLSearchParams({
+      //  recipe: JSON.stringify(recipe)
+      //});
+      window.location.href=`recipedetails.html`;
+    });
 
     card.addEventListener("click", function () {
       const clickedRecipeId = this.getAttribute("data-recipe-id");
