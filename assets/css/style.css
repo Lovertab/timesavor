@@ -46,7 +46,11 @@ section .btn {
   padding: 10px 20px;
   background-color: var(--reccardcolor);
   border: none;
-  border-radius: 5px;
+  border-radius: 10px;
+  width: 8em;
+  height: 3em;
+  font-size: 10px;
+  padding-bottom: 2.5em;
   cursor: pointer;
   transition: 0.3s ease;
 }
