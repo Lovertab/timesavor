@@ -209,3 +209,23 @@ img {
 #recipe-cards-container .card {
   min-height: 400px; /* Adjust based on your content */
 }
+
+#recipe-cards-container .card-body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+#recipe-cards-container .card-info {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+#recipe-cards-container .card-text {
+  margin-top: auto; /* Adjust or remove based on your design */
+}
+
+#recipe-cards-container .card {
+  min-height: 400px; /* Adjust based on your content */
+}
