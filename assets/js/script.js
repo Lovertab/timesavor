@@ -149,12 +149,23 @@ function createRecipeCards(data) {
 // Theme Switcher
 const toggleTheme = document.getElementById(`toggle-mode`);
 const body = document.body;
+toggleTheme.addEventListener('click', () => {
+    body.classList.toggle('dark-mode');
+    body.classList.toggle('light-mode');
 
-toggleTheme.addEventListener("click", () => {
-  body.classList.toggle(`dark-mode`);
-  body.classList.toggle(`light-mode`);
+    if (body.classList.contains('dark-mode')) {
+        localStorage.setItem('theme', 'dark');
+    } else {
+        localStorage.setItem('theme', 'light');
+    }
 });
-
+// Check for theme in localStorage and apply it
+const savedTheme = localStorage.getItem('theme');
+if (savedTheme === 'dark') {
+    body.classList.add('dark-mode');
+} else {
+    body.classList.add('light-mode');
+}
 // Youtube API Functions
 
 const API_KEY = "AIzaSyB6MgbqljzSbiDedQkLjTe6CXU6jE0TVDA";
