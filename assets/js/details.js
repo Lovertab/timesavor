@@ -172,7 +172,9 @@ async function searchYouTube(query) {
 function displayVideo(videoData, videoContainer) {
   if (videoData && videoData.id && videoData.id.videoId && videoData.snippet) {
     const videoEmbed = `
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/${videoData.id.videoId}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <div class="video-container">
+        <iframe class="video-iframe" src="https://www.youtube.com/embed/${videoData.id.videoId}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
       <h2>${videoData.snippet.title}</h2>
       <p>${videoData.snippet.description}</p>
     `;

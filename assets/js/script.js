@@ -154,46 +154,6 @@ if (savedTheme === "dark") {
 } else {
   body.classList.add("light-mode");
 }
-// Youtube API Functions
-
-const API_KEY = "AIzaSyB6MgbqljzSbiDedQkLjTe6CXU6jE0TVDA";
-
-query = "chicken sandwich recipe";
-
-async function searchYouTube(query) {
-  console.log("Sending request to YouTube API...");
-  const response = await fetch(
-    `https://www.googleapis.com/youtube/v3/search?key=${API_KEY}&type=video&part=snippet&maxResults=1&q=${encodeURIComponent(
-      query
-    )}`
-  );
-  if (!response.ok) {
-    console.error("Error fetching data from YouTube API:", response.status);
-    return;
-  }
-
-  console.log("Response received from YouTube API");
-  const data = await response.json();
-  if (data.items.length === 0) {
-    console.log("No results found for the given query");
-    return;
-  }
-  return data.items[0];
-}
-
-function displayVideo(videoData) {
-  const videoContainer = document.getElementById("video-container");
-  const videoEmbed = `
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/${videoData.id.videoId}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    <h2>${videoData.snippet.title}</h2>
-    <p>${videoData.snippet.description}</p>
-  `;
-  videoContainer.innerHTML = videoEmbed;
-}
-
-searchYouTube(query)
-  .then(displayVideo)
-  .catch((error) => console.error("Error searching YouTube:", error));
 
 //GRABS FORM DATA FROM LOCAL STORAGE
 document.getElementById("formID").addEventListener("submit", function (event) {
