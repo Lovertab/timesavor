@@ -139,7 +139,10 @@ toggleTheme.addEventListener("click", () => {
   body.classList.toggle(`dark-mode`);
   body.classList.toggle(`light-mode`);
 });
-
+const darkMode = localStorage.getItem('darkTheme');
+const darkTheme = document.getElementsByClassName("light-mode").value;
+localStorage.setItem('darkTheme', darkMode);
+    
 // Youtube API Functions
 
 const API_KEY = "AIzaSyB6MgbqljzSbiDedQkLjTe6CXU6jE0TVDA";
