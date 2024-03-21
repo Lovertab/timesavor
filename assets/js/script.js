@@ -30,6 +30,7 @@ function fetchTimedRecipes() {
 }
 
 function displayTimedRecipes(data) {
+
   const recipe = data.hits[0].recipe;
   const time = recipe.totalTime;
   const cuisineType = recipe.cuisineType[0];
@@ -176,4 +177,8 @@ document.getElementById("formID").addEventListener("submit", function (event) {
   localStorage.setItem("timeDuration", time);
 
   window.location.href = "recipecards.html";
+
+  
+
 });
+
