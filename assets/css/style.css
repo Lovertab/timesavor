@@ -84,7 +84,8 @@ section .btn {
 h1,
 h2,
 h3,
-h5 {
+h5,
+p {
   text-align: center;
   color: var(--darkfont);
 }
@@ -182,9 +183,10 @@ h5 {
   background-color: var(--reccardcolor);
 }
 
- #right-col img {
-    opacity: 0;
+#right-col img {
+  opacity: 0;
 }
+
 img {
   width: 600px;
   height: 550px;

@@ -162,8 +162,8 @@ toggleTheme.addEventListener("click", () => {
     paragraph.classList.add('light-text');
     content.classList.remove('dark-text');
     content.classList.add('light-text');
-    footer.classList.remove('light-text');
-    footer.classList.add('dark-text');
+    footer.classList.remove('dark-text');
+    footer.classList.add('light-text');
   }
 });
 // Check for theme in localStorage and apply it
