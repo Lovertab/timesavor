@@ -163,8 +163,11 @@ header {
 /* theme button */
 .btn-mode {
   display: flex;
-  align-items: flex-end;
+  flex-direction: row;
+  align-items: center;
   justify-content: flex-end;
+  margin-top: -3em;
+  flex-wrap: wrap;
 }
 
 #toggle-mode {
@@ -193,7 +196,12 @@ img {
   max-width: 30%;
   margin: 3px;
 }
+
 /* editing margin */
+.row {
+  /* this gives spacing between the rows of the cards page and the heading */
+  margin-top: 1.5em;
+}
 
 #recipe-cards-container .card:hover {
   transform: scale(1.05);
@@ -223,7 +231,8 @@ img {
 
 .video-container {
   position: relative;
-  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  padding-bottom: 56.25%;
+  /* 16:9 aspect ratio */
   height: 0;
   overflow: hidden;
 }
@@ -241,4 +250,3 @@ img {
   font-size: 0.9rem;
   color: #666;
 }
-
