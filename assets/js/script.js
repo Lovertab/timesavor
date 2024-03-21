@@ -1,8 +1,10 @@
 // Recipe API Functions
 
 ///API Key
-const appID = "05e0e399";
-const appKey = "eac8bc585be359a5c08825b3eccf7a8f";
+// const appID = "05e0e399";
+// const appKey = "eac8bc585be359a5c08825b3eccf7a8f";
+const appID = "9cc2ffbd";
+const appKey = "bc7e8bed88a44f384eb61221adb181ed";
 
 /// DOM element references
 const mealType = localStorage.getItem("mealType");
@@ -82,7 +84,7 @@ function createRecipeCards(data) {
     //const recipeID = localStorage.setItem('recipeID');
 
     const card = document.createElement("div");
-    card.classList.add("col", "col-md-6", "col-lg-4", "card", "mb-4");
+    card.classList.add("col", "col-6", "col-xl-4", "card", "mb-4");
     // Store the recipe ID in the card element for access when clicked
     card.setAttribute("data-recipe-id", recipeId);
 

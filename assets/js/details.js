@@ -53,6 +53,7 @@ function createRecipeContainer(recipe) {
   const recipeInstructions = document.createElement("a");
   recipeInstructions.classList.add("recipe-instructions", "btn", "btn-primary");
   recipeInstructions.href = recipe.url;
+  recipeInstructions.target = "_blank";
   recipeInstructions.innerText = "View Recipe Instructions";
   leftCol.appendChild(recipeInstructions);
 
