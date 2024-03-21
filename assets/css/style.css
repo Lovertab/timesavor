@@ -77,6 +77,7 @@ h1 {
 h1,
 h2,
 h3,
+h5,
 p {
   text-align: center;
   color: var(--reccardcolor);
@@ -250,5 +251,9 @@ img {
   font-size: 0.9rem;
   color: #666;
 
+}
+
+footer {
+  margin-top: 2em;
 }
 
