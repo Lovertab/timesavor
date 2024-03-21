@@ -31,8 +31,9 @@ function setFormValues() {
 }
 
 // Retrieve the last segment of the current URL to determine which page the user is on.
-
 const url = window.location.href.split("/").at(-1);
+
+// Check if the current page is 'recipecards.html' and call setFormValues if true.
 if (url === "recipecards.html") {
   setFormValues();
 }
