@@ -146,8 +146,6 @@ const paragraph = document.getElementById('paragraph-content');
 toggleTheme.addEventListener("click", () => {
   body.classList.toggle("dark-mode");
   body.classList.toggle("light-mode");
-  // content.classList.textContent('light-text');
-  //  content.classList.textContent('dark-text');
 
   if (body.classList.contains("dark-mode")) {
     localStorage.setItem("theme", "dark");
