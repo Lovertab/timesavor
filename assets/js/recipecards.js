@@ -30,6 +30,8 @@ function setFormValues() {
   if (storedTime) document.getElementById("timeDuration").value = storedTime;
 }
 
+// Retrieve the last segment of the current URL to determine which page the user is on.
+
 const url = window.location.href.split("/").at(-1);
 if (url === "recipecards.html") {
   setFormValues();
