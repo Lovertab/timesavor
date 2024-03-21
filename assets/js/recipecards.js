@@ -1,6 +1,6 @@
 // Define a function named setFormValues to initialize form fields with values from localStorage.
 function setFormValues() {
-  console.log("Setting form values from localStorage...");
+  console.log("Setting form values from localStorage..."); // Log a message to the console indicating the beginning of setting form values from localStorage.
 
   const storedMealType = localStorage.getItem("mealType");
   const storedCuisineType = localStorage.getItem("cuisineType");
