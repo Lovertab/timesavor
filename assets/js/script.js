@@ -142,6 +142,7 @@ const toggleTheme = document.getElementById(`toggle-mode`);
 const body = document.body;
 const content = document.getElementById('content');
 const paragraph = document.getElementById('paragraph-content');
+const footer = document.getElementById('footer-text');
 
 toggleTheme.addEventListener("click", () => {
   body.classList.toggle("dark-mode");
@@ -153,12 +154,16 @@ toggleTheme.addEventListener("click", () => {
     paragraph.classList.add('dark-text');
     content.classList.remove('light-text');
     content.classList.add('dark-text');
+    footer.classList.remove('light-text');
+    footer.classList.add('dark-text');
   } else {
     localStorage.setItem("theme", "light");
     paragraph.classList.remove('dark-text');
     paragraph.classList.add('light-text');
     content.classList.remove('dark-text');
     content.classList.add('light-text');
+    footer.classList.remove('light-text');
+    footer.classList.add('dark-text');
   }
 });
 // Check for theme in localStorage and apply it
