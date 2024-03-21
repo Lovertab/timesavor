@@ -198,6 +198,10 @@ img {
 }
 
 /* editing margin */
+.row {
+  /* this gives spacing between the rows of the cards page and the heading */
+  margin-top: 1.5em;
+}
 
 #recipe-cards-container .card:hover {
   transform: scale(1.05);
