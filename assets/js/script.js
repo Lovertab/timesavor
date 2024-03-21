@@ -82,7 +82,7 @@ function createRecipeCards(data) {
     //const recipeID = localStorage.setItem('recipeID');
 
     const card = document.createElement("div");
-    card.classList.add();
+    card.classList.add("col", "col-md-6", "col-4", "card", "mb-4");
     // Store the recipe ID in the card element for access when clicked
     card.setAttribute("data-recipe-id", recipeId);
 
