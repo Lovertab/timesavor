@@ -55,6 +55,12 @@ section .btn {
   transition: 0.3s ease;
 }
 
+@media (max-width: 991.98px) and (min-width: 768px) {
+  .card {
+    width: 50%;
+  }
+}
+
 /* this is the body class */
 .page-body {
   background-color: var(--bgcolor);
@@ -241,4 +247,3 @@ img {
   font-size: 0.9rem;
   color: #666;
 }
-
