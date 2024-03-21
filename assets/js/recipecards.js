@@ -2,6 +2,7 @@
 function setFormValues() {
   console.log("Setting form values from localStorage..."); // Log a message to the console indicating the beginning of setting form values from localStorage.
 
+  // Retrieve various types of information from localStorage and store them in respective constants.
   const storedMealType = localStorage.getItem("mealType");
   const storedCuisineType = localStorage.getItem("cuisineType");
   const storedDishType = localStorage.getItem("dishType");
