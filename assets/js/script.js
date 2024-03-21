@@ -1,8 +1,10 @@
 // Recipe API Functions
 
 ///API Key
-const appID = "05e0e399";
-const appKey = "eac8bc585be359a5c08825b3eccf7a8f";
+// const appID = "05e0e399";
+// const appKey = "eac8bc585be359a5c08825b3eccf7a8f";
+const appID = "9cc2ffbd";
+const appKey = "bc7e8bed88a44f384eb61221adb181ed";
 
 /// DOM element references
 const mealType = localStorage.getItem("mealType");
@@ -28,6 +30,7 @@ function fetchTimedRecipes() {
 }
 
 function displayTimedRecipes(data) {
+
   const recipe = data.hits[0].recipe;
   const time = recipe.totalTime;
   const cuisineType = recipe.cuisineType[0];
@@ -174,4 +177,8 @@ document.getElementById("formID").addEventListener("submit", function (event) {
   localStorage.setItem("timeDuration", time);
 
   window.location.href = "recipecards.html";
+
+  
+
 });
+
