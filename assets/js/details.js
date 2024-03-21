@@ -107,13 +107,16 @@ function createRecipeContainer(recipe) {
 
 const API_KEY = "AIzaSyA1ksDknP34z9z3scJYhzs4RlXoree05-w";
 
+// Function to search for videos related to the recipe on YouTube
 async function searchYouTube(query) {
   console.log("Sending request to YouTube API...");
+  // Fetch data from YouTube API
   const response = await fetch(
     `https://www.googleapis.com/youtube/v3/search?key=${API_KEY}&type=video&part=snippet&maxResults=1&q=${encodeURIComponent(
       query
     )}`
   );
+  // Check if response is successful
   if (!response.ok) {
     console.error("Error fetching data from YouTube API:", response.status);
     return;
@@ -128,8 +131,11 @@ async function searchYouTube(query) {
   return data.items[0];
 }
 
+// Function to display the video in the video container
 function displayVideo(videoData, videoContainer) {
+  // Check if video data and snippet exist
   if (videoData && videoData.id && videoData.id.videoId && videoData.snippet) {
+    // Construct HTML for embedding video
     const videoEmbed = `
       <div class="video-container">
         <iframe class="video-iframe" src="https://www.youtube.com/embed/${videoData.id.videoId}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -137,8 +143,10 @@ function displayVideo(videoData, videoContainer) {
       <h2>${videoData.snippet.title}</h2>
       <p>${videoData.snippet.description}</p>
     `;
+    // Set the inner HTML of the video container to the video embed HTML
     videoContainer.innerHTML = videoEmbed;
   } else {
+    // Display error message if video data is incomplete
     videoContainer.innerHTML = "<p>Unable to load video for this recipe.</p>";
   }
 }
