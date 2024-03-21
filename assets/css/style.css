@@ -13,27 +13,26 @@
   padding: 0;
 }
 
-h1 {
-  text-align: center;
-  color: rgb(6, 76, 93);
-}
-
+/* header section */
 header {
   background-color: var(--headcolor);
 }
 
-/* light and dark button */
+h1 {
+  padding-top: 20px;
+}
+
+/* light and dark buttons */
+
 /* light mode */
 .light-mode {
-  background-color: #ffffff;
-  color: #333333;
+  background-color: var(--lightfont);
   transition: 0.5s ease;
 }
 
 /* Dark Mode Styles */
 .dark-mode {
-  background-color: #333333;
-  color: #ffffff;
+  background-color: var(--darkfont);
   transition: 0.5s ease;
 }
 
@@ -65,9 +64,6 @@ section .btn {
   margin-top: 25px;
 }
 
-h1 {
-  padding-top: 25px;
-}
 
 .recipe-cards-container {
   /* Ensures the container takes full width of its parent */
@@ -133,15 +129,14 @@ p {
   background-color: var(--bgcolor);
 }
 
-header {
-  background-color: var(--headcolor);
-}
+
 
 #middle-top-col {
   text-align: center;
   margin-top: 25px;
 }
 
+/* this is the form  */
 #left-col {
   background-color: var(--headcolor);
   padding: 10px;
