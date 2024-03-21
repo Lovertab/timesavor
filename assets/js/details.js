@@ -1,17 +1,24 @@
+// Event listener to execute when the DOM content is loaded
 document.addEventListener("DOMContentLoaded", function () {
+  // Retrieve recipe data from session storage
   const recipeData = sessionStorage.getItem("recipeData");
 
+  // Check if recipe data exists
   if (recipeData) {
     const recipe = JSON.parse(recipeData);
+    // Get the recipe container element
     const recipeContainerDiv = document.getElementById("recipe-container");
+    // Create the recipe container
     const recipeContainer = createRecipeContainer(recipe);
     recipeContainerDiv.appendChild(recipeContainer);
-    sessionStorage.removeItem("recipeData"); // Remove the recipe data from session storage after use
+    // Remove the recipe data from session storage after use
+    sessionStorage.removeItem("recipeData");
   } else {
     console.error("Recipe data not found");
   }
 });
 
+// Function to create a recipe container element
 function createRecipeContainer(recipe) {
   // Create the container element
   const recipeContainerEl = document.createElement("div");
