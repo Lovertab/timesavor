@@ -177,7 +177,9 @@ header {
   background-color: var(--reccardcolor);
 }
 
-/* #right-col {}*/
+ #right-col img {
+    opacity: 0;
+}
 img {
   width: 600px;
   height: 550px;

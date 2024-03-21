@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Document title -->
     <title>TimeSavor-Recipe Page</title>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
     <!-- Bootstrap CSS -->
     <link
       rel="stylesheet"
@@ -33,7 +35,7 @@
         </a>
       </section>
       <!-- Recipe container -->
-      <div id="recipe-container"></div>
+      <div data-aos="fade-down" id="recipe-container"></div>
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-md-8">
@@ -54,5 +56,9 @@
     <script src="./assets/js/script.js"></script>
     <!-- Recipe details JavaScript -->
     <script src="./assets/js/details.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>
