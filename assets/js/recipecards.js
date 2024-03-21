@@ -18,6 +18,7 @@ function setFormValues() {
     storedTime,
   });
 
+  // Set the form fields with the retrieved values if they exist.
   if (storedMealType)
     document.getElementById("mealType").value = storedMealType;
   if (storedCuisineType)
