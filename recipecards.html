@@ -5,17 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Document title -->
     <title>Recipe Cards</title>
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!-- External CSS -->
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
     />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!-- Local CSS -->
     <link rel="stylesheet" href="assets/css/style.css" />
   </head>
 
   <body>
+    <!-- Header section -->
     <header>
       <h1>Time Savor - Recipes</h1>
+      <!-- Theme toggle button -->
       <section class="btn-mode">
         <button type="button" id="toggle-mode" class="btn btn-primary">
           Theme
@@ -25,7 +29,7 @@
     <div class="container-fluid">
       <div class="row">
         <div class="col-md-4">
-          <!-- Content for selecting recipes based on cuisine and time can go here -->
+          <!-- Form for selecting recipes based on cuisine, meal type, dish type, and time -->
           <form id="formID">
             <div class="form-group">
               <label for="mealType">Meal Type:</label>
@@ -85,7 +89,7 @@
             </section>
           </form>
         </div>
-
+        <!-- Container for recipe cards -->
         <div class="col-md-8">
           <div data-aos="zoom-in-down" class="row" id="recipe-cards-container">
             <!-- Dynamic recipe cards will be appended here by the JavaScript code -->
@@ -93,12 +97,16 @@
         </div>
       </div>
     </div>
+    <!-- Footer section -->
     <footer>
       <h5>Copyright &copy; 2024</h5>
     </footer>
+    <!-- Local JavaScript files -->
     <script src="assets/js/script.js"></script>
     <script src="assets/js/details.js"></script>
     <script src="assets/js/recipecards.js"></script>
+
+    <!-- External JavaScript libraries -->
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
