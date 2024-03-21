@@ -123,6 +123,7 @@ function createRecipeCards(data) {
     viewBtn.addEventListener("click", function () {
       sessionStorage.setItem("recipeData", JSON.stringify(recipe));
       window.location.href = "recipedetails.html";
+
     });
 
     card.addEventListener("click", function () {
