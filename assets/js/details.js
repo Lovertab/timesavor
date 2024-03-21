@@ -98,7 +98,8 @@ function createRecipeContainer(recipe) {
   return recipeContainerEl;
 }
 
-const API_KEY = "AIzaSyB6MgbqljzSbiDedQkLjTe6CXU6jE0TVDA";
+// const API_KEY = "AIzaSyB6MgbqljzSbiDedQkLjTe6CXU6jE0TVDA";
+const API_KEY = "AIzaSyA1ksDknP34z9z3scJYhzs4RlXoree05-w";
 
 async function searchYouTube(query) {
   console.log("Sending request to YouTube API...");
