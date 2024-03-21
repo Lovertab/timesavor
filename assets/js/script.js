@@ -198,7 +198,9 @@ document.getElementById("formID").addEventListener("submit", function (event) {
 
   window.location.href = "recipecards.html";
 
-  
 
 });
 
+const image = document.getElementById('animatedPic');
+const tl = gsap.timeline();
+tl.fromTo(image,{y:20, opacity:0},{duration:1, y:0, opacity:1,ease:"power2.inOut"});
