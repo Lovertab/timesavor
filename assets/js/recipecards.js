@@ -9,6 +9,7 @@ function setFormValues() {
   const storedExcluded = localStorage.getItem("excludeOption");
   const storedTime = localStorage.getItem("timeDuration");
 
+  // Log the retrieved values for debugging purposes, showing them grouped in an object.
   console.log("Retrieved Values:", {
     storedMealType,
     storedCuisineType,
