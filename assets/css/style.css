@@ -75,6 +75,13 @@ h1 {
   font-size: 24;
 }
 
+#header {
+  font-size: 62;
+  font-family: "Pacifico", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
 .recipe-cards-container {
   /* Ensures the container takes full width of its parent */
   width: 100%;

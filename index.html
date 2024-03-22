@@ -6,6 +6,12 @@
     <!-- Local CSS -->
     <link rel="stylesheet" href="assets/css/style.css" />
     <!-- External CSS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
@@ -16,12 +22,12 @@
   <body class="light-mode" class="page-body">
     <!-- Header section -->
     <header>
-      <h1>
+      <h1 id="header">
         <img
           class="logo"
           src="./assets/images/logo.png"
           alt="Logo that says Save minutes Savor Meals"
-        />Time Savor
+        />TimeSavor
       </h1>
       <!-- Button for toggling theme -->
       <section class="btn-mode">
@@ -34,7 +40,7 @@
     <!-- Form for selecting recipes based on cuisine, meal type, dish type, and time -->
     <div class="container">
       <div class="row">
-        <div class="col-md-6" id="left-col">
+        <div class="pr-8 col-md-6" id="left-col">
           <h2>Specify Your Requirements Here</h2>
           <form id="formID">
             <div class="form-group">
@@ -112,7 +118,7 @@
           </form>
         </div>
         <!-- Image on main page -->
-        <div class="col-md-6" id="right-col">
+        <div class="pl-8 col-md-6" id="right-col">
           <img
             src="https://burst.shopifycdn.com/photos/flatlay-iron-skillet-with-meat-and-other-food.jpg?width=1000&format=pjpg&exif=0&iptc=0"
             id="animatedPic"
