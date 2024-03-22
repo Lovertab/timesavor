@@ -20,6 +20,7 @@ h1 {
 
 header {
   background-color: var(--headcolor);
+  padding-bottom: 1em;
 }
 
 .logo {
@@ -178,7 +179,7 @@ header {
 .btn-mode {
   display: flex;
   flex-direction: row;
-  align-items: center;
+  /* align-items: center; */
   justify-content: flex-end;
   margin-top: -3em;
   flex-wrap: wrap;
@@ -193,6 +194,7 @@ header {
 #right-col img {
   opacity: 0;
 }
+
 img {
   width: 600px;
   height: 550px;
