@@ -15,6 +15,7 @@ const time = localStorage.getItem("timeDuration");
 
 fetchTimedRecipes();
 
+// Function to fetch recipes based on user preferences
 function fetchTimedRecipes() {
   const apiUrl = `https://api.edamam.com/api/recipes/v2?type=public&app_id=${appID}&app_key=${appKey}&cuisineType=${cuisineType}&mealType=${mealType}&dishType=${dishType}&time=${time}&excluded=${excluded}`;
 
@@ -29,33 +30,36 @@ function fetchTimedRecipes() {
     });
 }
 
+// Function to display timed recipes
 function displayTimedRecipes(data) {
+  // Extract recipe data from the API response
   const recipe = data.hits[0].recipe;
   const time = recipe.totalTime;
   const cuisineType = recipe.cuisineType[0];
   const dishType = recipe.dishType[0];
+  // Create a recipe card element
   const card = document.createElement("div");
 
   card.classList.add("recipe-card");
-
+  //Create elements to display recipe information
   const mealElement = document.createElement("p");
   const cuisineElement = document.createElement("p");
   const dishElement = document.createElement("p");
   const excludedElement = document.createElement("p");
   const timeElement = document.createElement("p");
-
+  // Set text content for each element
   mealElement.textContent = `Meal Type: ${mealType}`;
   cuisineElement.textContent = `Cuisine: ${cuisineType}`;
   dishElement.textContent = `Dish Type: ${dishType}`;
   excludedElement.textContent = `Excluded: ${excluded}`;
   timeElement.textContent = `Time: ${time.toLocaleTimeString()}`;
-
+  // Append elements to the card
   card.appendChild(mealElement);
   card.appendChild(cuisineElement);
   card.appendChild(dishElement);
   card.appendChild(excludedElement);
   card.appendChild(timeElement);
-
+  // Append the card to the recipe cards container
   const container = document.getElementById("recipe-cards-container");
   container.appendChild(card);
   console.log(time);
@@ -65,54 +69,56 @@ function displayTimedRecipes(data) {
   console.log(dishType);
 }
 
+// Function to create recipe cards based on fetched data
 function createRecipeCards(data) {
+  // Get the container for recipe cards
   const container = document.getElementById("recipe-cards-container");
+  // Check if the container exists
   if (!container) {
     console.error(
       "Container element with ID 'recipe-cards-container' not found"
     );
     return;
   }
+  // Clear the container
   container.innerHTML = "";
-
+  // Hit over each recipe in the fetched data
   data.hits.forEach((hit) => {
     const recipe = hit.recipe;
-
+    // Extract recipe ID from the URI
     const recipeId = hit.recipe.uri.split("#recipe_")[1];
     console.log(recipeId);
-    //local storage recipe
-    //const recipeID = localStorage.setItem('recipeID');
-
+    // Create a card element
     const card = document.createElement("div");
     card.classList.add("col", "col-6", "col-xl-4", "card", "mb-4");
     // Store the recipe ID in the card element for access when clicked
     card.setAttribute("data-recipe-id", recipeId);
-
+    // Create an image element for the recipe
     const img = document.createElement("img");
     img.src = recipe.image;
     img.classList.add("card-img-top");
     img.alt = "Recipe Image";
     card.appendChild(img);
-
+    // Create a card body element
     const cardBody = document.createElement("div");
     cardBody.classList.add("card-body");
     card.appendChild(cardBody);
-
+    // Create a div for recipe information
     const cardInfo = document.createElement("div");
     cardInfo.classList.add("card-info");
     cardBody.appendChild(cardInfo);
-
+    // Create a heading for recipe title
     const title = document.createElement("h5");
     title.classList.add("card-title");
     title.textContent = recipe.label;
     cardBody.appendChild(title);
-
+    // Create a paragraph for recipe description
     const description = document.createElement("p");
     description.classList.add("card-text");
     description.textContent =
       recipe.dietLabels.join(", ") || "Delicious recipe";
     cardBody.appendChild(description);
-
+    // Create a button to view recipe details
     const viewBtn = document.createElement("a");
 
     viewBtn.classList.add("btn", "btn-primary", "view-recipe-btn"); // Added 'view-recipe-btn' class
@@ -120,18 +126,21 @@ function createRecipeCards(data) {
 
     viewBtn.textContent = "View Recipe";
     cardBody.appendChild(viewBtn);
-    //added button even listener here
 
+    //added button even listener here
     viewBtn.addEventListener("click", function () {
+      // Store recipe data in session storage
       sessionStorage.setItem("recipeData", JSON.stringify(recipe));
+      // Redirect to recipe details page
       window.location.href = "recipedetails.html";
     });
 
     card.addEventListener("click", function () {
+      // Get the clicked recipe ID
       const clickedRecipeId = this.getAttribute("data-recipe-id");
       console.log("Clicked Recipe ID:", clickedRecipeId); // This will now only log when a card is clicked
     });
-
+    // Append the card to the container
     container.appendChild(card);
   });
 }
@@ -177,3 +186,14 @@ document.getElementById("formID").addEventListener("submit", function (event) {
 
   window.location.href = "recipecards.html";
 });
+// Animation
+// Get the image element for animation
+const image = document.getElementById("animatedPic");
+// Create a timeline for animation using GSAP library
+const tl = gsap.timeline();
+// Animate the image with a transition effect
+tl.fromTo(
+  image,
+  { y: 20, opacity: 0 },
+  { duration: 1, y: 0, opacity: 1, ease: "power2.inOut" }
+);
