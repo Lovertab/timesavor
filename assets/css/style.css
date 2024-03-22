@@ -166,6 +166,14 @@ p {
   border-radius: 5px;
 }
 
+#formID {
+  background-color: var(--headcolor);
+  padding: 10px;
+  margin-top: 1.5em;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
 .form-group {
   margin-bottom: 20px;
   color: #f8f7ff;
@@ -183,7 +191,7 @@ p {
   display: flex;
   flex-direction: row;
   /* align-items: center; */
-  justify-content: flex-end;
+  justify-content: space-between;
   margin-top: -3em;
   flex-wrap: wrap;
 }
@@ -194,7 +202,16 @@ p {
   background-color: var(--reccardcolor);
 }
 
-#right-col img {
+/* .btn .btn-primary {
+  display: flex;
+  flex-direction: row;
+  /* align-items: center; */
+justify-content: space-between;
+margin-top: -3em;
+flex-wrap: wrap;
+}
+
+*/ #right-col img {
   opacity: 0;
 }
 
