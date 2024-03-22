@@ -23,15 +23,7 @@ header {
   height: 150px;
 }
 
-.logo {
-  width: 150px;
-  height: 150px;
-}
-
-
-
-/* light and dark buttons */
-
+/* light and dark button */
 /* light mode */
 .light-mode {
   background-color: var(--lightfont);
@@ -190,7 +182,7 @@ p {
 .btn-mode {
   display: flex;
   flex-direction: row;
-  align-items: center;
+  /* align-items: center; */
   justify-content: flex-end;
   margin-top: -3em;
   flex-wrap: wrap;
