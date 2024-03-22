@@ -18,9 +18,17 @@ header {
   background-color: var(--headcolor);
 }
 
-h1 {
-  padding-top: 20px;
+.logo {
+  width: 150px;
+  height: 150px;
 }
+
+.logo {
+  width: 150px;
+  height: 150px;
+}
+
+
 
 /* light and dark buttons */
 
@@ -75,6 +83,17 @@ section .btn {
   margin-top: 25px;
 }
 
+h1 {
+  padding-top: 2px;
+  font-size: 24;
+}
+
+#header {
+  font-size: 62;
+  font-family: "Pacifico", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
 
 .recipe-cards-container {
   /* Ensures the container takes full width of its parent */
@@ -259,7 +278,6 @@ img {
   margin-top: 1rem;
   font-size: 0.9rem;
   color: #666;
-
 }
 
 footer {
