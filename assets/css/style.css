@@ -1,3 +1,4 @@
+/* Define custom CSS variables for colors to enable theme customization. */
 :root {
   --headcolor: #6290c3;
   --bgcolor: #bf4e30;
@@ -7,13 +8,13 @@
   --darkfont: #121619;
   --lightfont: #f8f7ff;
 }
-
+/* Reset margin and padding for all elements to ensure consistency. */
 * {
   margin: 0;
   padding: 0;
 }
 
-/* header section */
+/* Styles for the header section */
 header {
   background-color: var(--headcolor);
 }
@@ -23,7 +24,8 @@ header {
   height: 150px;
 }
 
-/* light and dark button */
+/* Styles for light and dark mode buttons */
+
 /* light mode */
 .light-mode {
   background-color: var(--lightfont);
@@ -48,6 +50,7 @@ header {
   background-color: var(--bgcolor);
 }
 
+/* Styles for buttons.  */
 section .btn {
   display: inline;
   padding: 10px 20px;
@@ -62,10 +65,8 @@ section .btn {
   transition: 0.3s ease;
 }
 
+/* Styles for the body class */
 
-
-
-/* this is the body class */
 .page-body {
   background-color: var(--bgcolor);
 }
@@ -101,6 +102,7 @@ p {
   color: var(--darkfont);
 }
 
+/* Styles for recipe cards. */
 .card {
   /* Basic card styling, adjust as needed */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -142,7 +144,7 @@ p {
   margin-top: 0.5rem;
 }
 
-/* this is the submit button */
+/* Styles for submit button. */
 #submit-button {
   background-color: var(--reccardcolor);
 }
@@ -151,14 +153,11 @@ p {
   background-color: var(--bgcolor);
 }
 
-
-
 #middle-top-col {
   text-align: center;
   margin-top: 25px;
 }
 
-/* this is the form  */
 #left-col {
   background-color: var(--headcolor);
   padding: 10px;
@@ -166,6 +165,7 @@ p {
   border-radius: 5px;
 }
 
+/* Styles for form */
 .form-group {
   margin-bottom: 20px;
   color: #f8f7ff;
@@ -178,7 +178,7 @@ p {
   margin-bottom: 5px;
 }
 
-/* theme button */
+/* Styles for theme button */
 .btn-mode {
   display: flex;
   flex-direction: row;
@@ -202,6 +202,8 @@ img {
   width: 600px;
   height: 550px;
 }
+
+/* Styles for recipe cards container */
 
 #recipe-cards-container .card {
   /* Card styles specific to recipe cards */
@@ -250,6 +252,7 @@ img {
   margin-top: auto;
 }
 
+/* Styles for video container. */
 .video-container {
   position: relative;
   padding-bottom: 56.25%;
@@ -272,6 +275,7 @@ img {
   color: #666;
 }
 
+/* Styles for footer */
 footer {
   margin-top: 2em;
   color: var(--darkfont);
