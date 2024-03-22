@@ -202,14 +202,6 @@ p {
   background-color: var(--reccardcolor);
 }
 
-/* .btn .btn-primary {
-  display: flex;
-  flex-direction: row;
-  /* align-items: center; */
-justify-content: space-between;
-margin-top: -3em;
-flex-wrap: wrap;
-}
 
 */ #right-col img {
   opacity: 0;
