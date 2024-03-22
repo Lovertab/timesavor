@@ -13,14 +13,9 @@
   padding: 0;
 }
 
-h1 {
-  text-align: center;
-  color: rgb(6, 76, 93);
-}
-
+/* header section */
 header {
   background-color: var(--headcolor);
-  padding-bottom: 1em;
 }
 
 .logo {
@@ -31,16 +26,22 @@ header {
 /* light and dark button */
 /* light mode */
 .light-mode {
-  background-color: #ffffff;
-  color: #333333;
+  background-color: var(--lightfont);
   transition: 0.5s ease;
+}
+
+.light-text {
+  color: var(--darkfont);
 }
 
 /* Dark Mode Styles */
 .dark-mode {
-  background-color: #333333;
-  color: #ffffff;
+  background-color: var(--darkfont);
   transition: 0.5s ease;
+}
+
+.dark-text {
+  color: var(--lightfont);
 }
 
 #toggle-mode:hover {
@@ -60,6 +61,9 @@ section .btn {
   cursor: pointer;
   transition: 0.3s ease;
 }
+
+
+
 
 /* this is the body class */
 .page-body {
@@ -94,7 +98,7 @@ h3,
 h5,
 p {
   text-align: center;
-  color: var(--reccardcolor);
+  color: var(--darkfont);
 }
 
 .card {
@@ -147,15 +151,14 @@ p {
   background-color: var(--bgcolor);
 }
 
-header {
-  background-color: var(--headcolor);
-}
+
 
 #middle-top-col {
   text-align: center;
   margin-top: 25px;
 }
 
+/* this is the form  */
 #left-col {
   background-color: var(--headcolor);
   padding: 10px;
@@ -271,4 +274,5 @@ img {
 
 footer {
   margin-top: 2em;
+  color: var(--darkfont);
 }
