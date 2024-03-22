@@ -71,7 +71,8 @@ section .btn {
 }
 
 h1 {
-  padding-top: 25px;
+  padding-top: 2px;
+  font-size: 24;
 }
 
 .recipe-cards-container {
