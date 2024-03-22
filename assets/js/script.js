@@ -148,22 +148,36 @@ function createRecipeCards(data) {
 // Theme Switcher
 const toggleTheme = document.getElementById(`toggle-mode`);
 const body = document.body;
+const footer = document.getElementById('footer-text');
+
 toggleTheme.addEventListener("click", () => {
   body.classList.toggle("dark-mode");
   body.classList.toggle("light-mode");
 
   if (body.classList.contains("dark-mode")) {
     localStorage.setItem("theme", "dark");
+    localStorage.setItem("text", "dark");
+    footer.classList.remove('light-text');
+    footer.classList.add('dark-text');
   } else {
     localStorage.setItem("theme", "light");
+    localStorage.setItem("text", "light");
+    footer.classList.remove('dark-text');
+    footer.classList.add('light-text');
   }
 });
 // Check for theme in localStorage and apply it
 const savedTheme = localStorage.getItem("theme");
+const saveText = localStorage.getItem("text");
 if (savedTheme === "dark") {
   body.classList.add("dark-mode");
 } else {
   body.classList.add("light-mode");
+}
+if (saveText === "dark") {
+  footer.classList.add("dark-text");
+} else {
+  footer.classList.add("light-text");
 }
 
 //GRABS FORM DATA FROM LOCAL STORAGE
